@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<title>Sade Bonus · Günlük Bonuslar</title>
+<title>Sade Bonuslar</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <style>
@@ -36,7 +36,7 @@
     margin-bottom: 14px;
   }
 
-  /* FİLTRELER */
+  /* FİLTRELER — SadeBonus sarı tema */
   .filter-row {
     display: flex;
     flex-wrap: wrap;
@@ -58,7 +58,7 @@
   }
 
   .filter-pill.active {
-    background: #FFD54F;   /* Bright Casino Gold */
+    background: #FFD54F;   /* SadeBonus sarı */
     color: #111;
     border-color: #FFD54F;
   }
@@ -104,6 +104,13 @@
     border-radius: 999px;
     padding: 6px 12px;
     display: block;
+    cursor: pointer;
+    transition: all .2s ease;
+  }
+
+  .site-logo:hover {
+    transform: scale(1.06);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.18);
   }
 
   /* METİN */
@@ -138,7 +145,7 @@
     color: #374151;
   }
 
-  /* CTA — MASAÜSTÜ */
+  /* CTA — SadeBonus sarı buton */
   .bonus-right {
     min-width: 140px;
     text-align: right;
@@ -172,11 +179,8 @@
     margin-top: 16px;
   }
 
-  /* ----------------------------- */
-  /*        MOBİL OPTİMİZASYON     */
-  /* ----------------------------- */
+  /* MOBİL OPTİMİZASYON */
   @media (max-width: 600px) {
-
     .bonus-item {
       flex-wrap: wrap;
       align-items: flex-start;
@@ -223,8 +227,8 @@
 <body>
 
 <div class="page-container">
-  <h1>SadeBonus</h1>
-  <div class="subtitle">En sade bonus listesi. Filtrele · Sadece işine yarayan bonusları gör.</div>
+  <h1>Günlük Bonuslar</h1>
+  <div class="subtitle">Filtrele · Sadece ilgilendiğin bonusları listele</div>
 
   <!-- FİLTRELER -->
   <div class="filter-row">
@@ -255,14 +259,14 @@ const TAG_LABELS = {
   "kayip-bonusu": "Kayıp bonusu"
 };
 
-/* BONUS VERİLERİ */
+/* BONUS VERİLERİ (track linklerle) */
 const bonuses = [
   {
     site: "1xbet",
     logoUrl: "https://raw.githubusercontent.com/thexprojects/filtre-bonus/main/logos/1xbet.png",
     title: "55.000 TL + 150 FS Hoş Geldin Bonusu",
     detail: "İlk 4 para yatırma işleminize özel teklif!",
-    url: "https://1xbet.com",
+    url: "http://cropped.link/gg4da",
     tags: ["hosgeldin", "dusuk-cevrim"]
   },
   {
@@ -270,7 +274,7 @@ const bonuses = [
     logoUrl: "https://raw.githubusercontent.com/thexprojects/filtre-bonus/main/logos/1xbet.png",
     title: "%25 Net Kayıp Bonusu",
     detail: "Tüm alanlara baremsiz kayıp bonusu ayrıcalığı!",
-    url: "https://1xbet.com",
+    url: "http://cropped.link/gg4da",
     tags: ["kayip-bonusu", "cevrim-sartsiz"]
   },
 
@@ -279,7 +283,7 @@ const bonuses = [
     logoUrl: "https://raw.githubusercontent.com/thexprojects/filtre-bonus/main/logos/casinohub.png",
     title: "%375 Hoş Geldin Bonusu",
     detail: "Islak başlangıçlar seni bekliyor!",
-    url: "https://casinomhub.com",
+    url: "https://tls.tc/GzM8J?",
     tags: ["hosgeldin", "dusuk-cevrim"]
   },
   {
@@ -287,7 +291,7 @@ const bonuses = [
     logoUrl: "https://raw.githubusercontent.com/thexprojects/filtre-bonus/main/logos/casinohub.png",
     title: "%30'a varan Kayıp Bonusu",
     detail: "Yüksek oranlı kayıp bonusu ile masadan erken kalkmak yok!",
-    url: "https://casinomhub.com",
+    url: "https://tls.tc/GzM8J?",
     tags: ["kayip-bonusu", "cevrim-sartsiz"]
   },
 
@@ -296,7 +300,7 @@ const bonuses = [
     logoUrl: "https://raw.githubusercontent.com/thexprojects/filtre-bonus/main/logos/ligobet.png",
     title: "750 TL Deneme Bonusu",
     detail: "Ücretsiz başlangıç teklifi ile hemen oyna!",
-    url: "https://ligobet.com",
+    url: "https://cutt.ly/NteEarVX",
     tags: ["cevrim-sartsiz", "deneme-bonusu"]
   },
 
@@ -305,7 +309,7 @@ const bonuses = [
     logoUrl: "https://raw.githubusercontent.com/thexprojects/filtre-bonus/main/logos/maxwin.png",
     title: "Üye Olan Herkese 300 TL Hediye",
     detail: "Tüm alanlarda geçerli nakit bonus!",
-    url: "https://maxwin.com",
+    url: "https://cutt.ly/maxsocial?",
     tags: ["yatirim-sartsiz", "cevrim-sartsiz", "deneme-bonusu"]
   },
 
@@ -314,7 +318,7 @@ const bonuses = [
     logoUrl: "https://raw.githubusercontent.com/thexprojects/filtre-bonus/main/logos/mobilbahis.png",
     title: "Yeni Üyelere 100 Freespin",
     detail: "Ücretsiz çevirme hakkı ile kazan!",
-    url: "https://mobilbahis.com",
+    url: "https://tinyurl.com/2kh8e3ab",
     tags: ["yatirim-sartsiz", "freespin"]
   },
 
@@ -323,7 +327,7 @@ const bonuses = [
     logoUrl: "https://raw.githubusercontent.com/thexprojects/filtre-bonus/main/logos/otobet.png",
     title: "800 TL Deneme Bonusu",
     detail: "Nakit bonus anında hesabında!",
-    url: "https://otobet.com",
+    url: "https://cutt.ly/Xtelei33",
     tags: ["yatirim-sartsiz", "cevrim-sartsiz", "deneme-bonusu"]
   },
 
@@ -332,7 +336,7 @@ const bonuses = [
     logoUrl: "https://raw.githubusercontent.com/thexprojects/filtre-bonus/main/logos/rokubet.png",
     title: "Herkese 335 Freespin Hediye",
     detail: "İlk üyeliğine özel bedava çevir!",
-    url: "https://rokubet.com",
+    url: "https://rokubet-resmi6.com/",
     tags: ["yatirim-sartsiz", "freespin"]
   },
 
@@ -341,7 +345,7 @@ const bonuses = [
     logoUrl: "https://raw.githubusercontent.com/thexprojects/filtre-bonus/main/logos/tipobet.png",
     title: "Yeni Üyelere 750 TL Freebet",
     detail: "Yapacağın ilk kupon ücretsiz!",
-    url: "https://tipobet.com",
+    url: "https://goo.su/Tipobet",
     tags: ["freebet", "yatirim-sartsiz"]
   }
 ];
@@ -375,6 +379,7 @@ function renderBonuses() {
         <img class="site-logo"
              src="${b.logoUrl}"
              alt="${b.site}"
+             onclick="window.open('${b.url}', '_blank')"
              onerror="this.style.visibility='hidden';">
       </div>
 
@@ -385,7 +390,9 @@ function renderBonuses() {
       </div>
 
       <div class="bonus-right">
-        <button class="btn" onclick="window.location.href='${b.url}'">Siteye Git</button>
+        <button class="btn" onclick="window.open('${b.url}', '_blank')">
+          Sitede Kullan
+        </button>
       </div>
     `;
 
