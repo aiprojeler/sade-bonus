@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<title>Sade Bonuslar</title>
+<title>Sade Bonus</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <style>
@@ -12,11 +12,10 @@
     font-family: system-ui, sans-serif;
     margin: 0;
     padding: 16px;
-    background: #f5f5f5;
-    color: #111;
+    background: #f6f7f9;
+    color: #1f2937;
   }
 
-  /* ORTALANMIŞ ANA CONTAINER */
   .page-container {
     max-width: 960px;
     margin: 0 auto;
@@ -25,18 +24,18 @@
   h1 {
     text-align: center;
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 800;
     margin-bottom: 6px;
   }
 
   .subtitle {
     text-align: center;
     font-size: 13px;
-    color: #666;
-    margin-bottom: 14px;
+    color: #6b7280;
+    margin-bottom: 16px;
   }
 
-  /* FİLTRELER — SadeBonus sarı tema */
+  /* FİLTRELER */
   .filter-row {
     display: flex;
     flex-wrap: wrap;
@@ -46,54 +45,48 @@
   }
 
   .filter-pill {
-    padding: 6px 12px;
+    padding: 6px 14px;
     background: #fff;
-    border: 1px solid #d4d4d4;
+    border: 1px solid #d1d5db;
     border-radius: 999px;
     cursor: pointer;
     font-size: 13px;
     white-space: nowrap;
-    color: #333;
     transition: all .15s ease;
   }
 
   .filter-pill.active {
-    background: #FFD54F;   /* SadeBonus sarı */
-    color: #111;
-    border-color: #FFD54F;
-  }
-
-  .filter-pill:hover {
-    border-color: #FFD54F;
+    background: #ffd966;
+    border-color: #ffd966;
+    color: #111827;
+    font-weight: 700;
   }
 
   /* ANA KART */
   .section {
-    background: #ffffff;
+    background: #fff;
     padding: 12px;
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0,0,0,.06);
-    border-top: 3px solid #FFD54F;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.06);
   }
 
-  /* BONUS KART — MASAÜSTÜ */
+  /* BONUS */
   .bonus-item {
     display: flex;
     align-items: center;
     gap: 12px;
     padding: 14px 0;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e7eb;
   }
+
   .bonus-item:last-child {
     border-bottom: none;
   }
 
-  /* LOGO */
   .bonus-left {
     min-width: 160px;
     display: flex;
     justify-content: center;
-    align-items: center;
   }
 
   .site-logo {
@@ -103,17 +96,15 @@
     background: #f3f4f6;
     border-radius: 999px;
     padding: 6px 12px;
-    display: block;
     cursor: pointer;
     transition: all .2s ease;
   }
 
   .site-logo:hover {
-    transform: scale(1.06);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,.15);
   }
 
-  /* METİN */
   .bonus-center {
     flex: 1;
   }
@@ -121,13 +112,12 @@
   .bonus-title {
     font-size: 15px;
     font-weight: 700;
-    margin-bottom: 5px;
-    color: #111;
+    margin-bottom: 4px;
   }
 
   .bonus-detail {
-    color: #666;
     font-size: 12px;
+    color: #6b7280;
     margin-bottom: 6px;
   }
 
@@ -139,52 +129,49 @@
 
   .tag-pill {
     font-size: 10px;
-    padding: 3px 7px;
+    padding: 3px 8px;
     border-radius: 999px;
-    background: #f3f4f6;
-    color: #374151;
+    background: #fef3c7;
+    color: #92400e;
+    font-weight: 600;
   }
 
-  /* CTA — SadeBonus sarı buton */
+  /* CTA */
   .bonus-right {
     min-width: 140px;
-    text-align: right;
     display: flex;
     justify-content: flex-end;
   }
 
   .btn {
-    background: #FFD54F;       /* Bright Casino Gold */
-    color: #111;
+    background: #ffd966;
+    color: #111827;
     padding: 12px 22px;
-    border-radius: 10px;
+    border-radius: 12px;
     border: none;
     cursor: pointer;
     font-size: 14px;
-    font-weight: 700;
-    white-space: nowrap;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    font-weight: 800;
+    box-shadow: 0 4px 8px rgba(0,0,0,.15);
     transition: all .15s ease;
   }
 
   .btn:hover {
-    background: #FFC107;       /* Daha koyu, parlak altın */
+    background: #f4c430;
     transform: translateY(-1px);
   }
 
   .empty {
     text-align: center;
     font-size: 13px;
-    color: #777;
+    color: #6b7280;
     margin-top: 16px;
   }
 
-  /* MOBİL OPTİMİZASYON */
+  /* MOBİL */
   @media (max-width: 600px) {
     .bonus-item {
       flex-wrap: wrap;
-      align-items: flex-start;
-      gap: 10px;
     }
 
     .bonus-left {
@@ -196,29 +183,17 @@
     .site-logo {
       width: 100px;
       height: 34px;
-      padding: 6px 10px;
-    }
-
-    .bonus-center {
-      flex: 1;
-      min-width: 0;
     }
 
     .bonus-right {
       flex: 0 0 100%;
-      margin-top: 4px;
-      text-align: left;
+      margin-top: 6px;
       justify-content: flex-start;
     }
 
     .btn {
       width: 100%;
-      font-size: 14px;
       padding: 14px;
-    }
-
-    .page-container {
-      max-width: 100%;
     }
   }
 </style>
@@ -227,16 +202,15 @@
 <body>
 
 <div class="page-container">
-  <h1>Sade Bonuslar</h1>
-  <div class="subtitle">Filtrele · Kazancın en sade hali /div>
+  <h1>Sade Bonus</h1>
+  <div class="subtitle">Filtrele · Kazancın en sade hali</div>
 
-  <!-- FİLTRELER -->
   <div class="filter-row">
     <div class="filter-pill active" data-filter="tum">Tümü</div>
     <div class="filter-pill" data-filter="yatirim-sartsiz">Yatırım şartsız</div>
     <div class="filter-pill" data-filter="cevrim-sartsiz">Çevrim şartsız</div>
     <div class="filter-pill" data-filter="dusuk-cevrim">Düşük çevrimli</div>
-    <div class="filter-pill" data-filter="hosgeldin">Hoş geldin bonusu</div>
+    <div class="filter-pill" data-filter="hosgeldin">Hoş geldin</div>
     <div class="filter-pill" data-filter="freebet">Freebet</div>
     <div class="filter-pill" data-filter="freespin">Freespin</div>
     <div class="filter-pill" data-filter="deneme-bonusu">Deneme bonusu</div>
@@ -259,146 +233,7 @@ const TAG_LABELS = {
   "kayip-bonusu": "Kayıp bonusu"
 };
 
-/* BONUS VERİLERİ (track linklerle) */
-const bonuses = [
-  /* TIPOBET REKLAMLARI (KALACAK) */
-  {
-    site: "tipobet",
-    logoUrl: "https://raw.githubusercontent.com/thexprojects/filtre-bonus/main/logos/tipobet.png",
-    title: "Yeni Üyelere 750 TL Freebet",
-    detail: "Yapacağın ilk kupon ücretsiz!",
-    url: "https://goo.su/Tipobet",
-    tags: ["freebet", "yatirim-sartsiz"]
-  },
-
-  /* XSLOT */
-  {
-    site: "xslot",
-    logoUrl: "logos/xslot.png",
-    title: "Yeni Üyelere 1.000 Freespin",
-    detail: "İlk üyeliğine özel 1000 adet ücretsiz çevirme hakkı!",
-    url: "https://cutt.ly/5rNjCZmz",
-    tags: ["freespin", "deneme-bonusu", "cevrim-sartsiz", "yatirim-sartsiz"]
-  },
-  {
-    site: "xslot",
-    logoUrl: "logos/xslot.png",
-    title: "İlk Yatırımına 3.000 TL İade",
-    detail: "%100 nakit iade ile ilk oyununu garantile!",
-    url: "https://cutt.ly/5rNjCZmz",
-    tags: ["hosgeldin", "dusuk-cevrim"]
-  },
-  {
-    site: "xslot",
-    logoUrl: "logos/xslot.png",
-    title: "%200 Nakit Yatırım Bonusu",
-    detail: "Salı, çarşamba, perşembe günlerine özel yatırım bonusu!",
-    url: "https://cutt.ly/5rNjCZmz",
-    tags: ["dusuk-cevrim"]
-  },
-  {
-    site: "xslot",
-    logoUrl: "logos/xslot.png",
-    title: "%20 Çevrim Şartsız Bonus",
-    detail: "Her gün %20 çevrimsiz bonus fırsatı!",
-    url: "https://cutt.ly/5rNjCZmz",
-    tags: ["cevrim-sartsiz"]
-  },
-  {
-    site: "xslot",
-    logoUrl: "logos/xslot.png",
-    title: "%20'ye varan Kayıp Bonusu",
-    detail: "Efsane kayıp bonusu ile oyuna devam et!",
-    url: "https://cutt.ly/5rNjCZmz",
-    tags: ["cevrim-sartsiz", "kayip-bonusu"]
-  },
-
-  /* PRIMEBAHIS */
-  {
-    site: "primebahis",
-    logoUrl: "logos/primebahis.png",
-    title: "%200 Hoş Geldin Bonusu",
-    detail: "Casino oyunlarına özel %200 ekstra başlangıç!",
-    url: "https://primebahis306.com/register/44896",
-    tags: ["hosgeldin"]
-  },
-  {
-    site: "primebahis",
-    logoUrl: "logos/primebahis.png",
-    title: "%10 Çevrimsiz Kripto Bonusu",
-    detail: "Kripto işlemlerin %10 daha değerli!",
-    url: "https://primebahis306.com/register/44896",
-    tags: ["cevrim-sartsiz"]
-  },
-  {
-    site: "primebahis",
-    logoUrl: "logos/primebahis.png",
-    title: "Ertesi Gün 400 Freespin",
-    detail: "Minimum 500 TL yatır, yarına freespin kazan!",
-    url: "https://primebahis306.com/register/44896",
-    tags: ["freespin"]
-  },
-  {
-    site: "primebahis",
-    logoUrl: "logos/primebahis.png",
-    title: "Yeni Üyelere 444 Freespin",
-    detail: "Hemen üye ol, 444 freespin kazan!",
-    url: "https://primebahis306.com/register/44896",
-    tags: ["freespin"]
-  },
-  {
-    site: "primebahis",
-    logoUrl: "logos/primebahis.png",
-    title: "%30'a varan Kayıp Bonusu",
-    detail: "Tüm alanlarda geçerli kayıp bonusu ile oyuna geri dön!",
-    url: "https://primebahis306.com/register/44896",
-    tags: ["kayip-bonusu"]
-  },
-
-  /* MARSBAHIS */
-  {
-    site: "marsbahis",
-    logoUrl: "logos/marsbahis.png",
-    title: "%10 Nakit İade",
-    detail: "Her kaybına anında %10 nakit iade!",
-    url: "https://www.youlink.ink/op3e1wzktl",
-    tags: ["kayip-bonusu"]
-  },
-  {
-    site: "marsbahis",
-    logoUrl: "logos/marsbahis.png",
-    title: "Telegram'a Özel 50 Freespin",
-    detail: "Gates of Mars'a özel 50 çevirme hakkı hediye!",
-    url: "https://www.youlink.ink/op3e1wzktl",
-    tags: ["freespin"]
-  },
-
-  /* HILTONBET */
-  {
-    site: "hiltonbet",
-    logoUrl: "logos/hiltonbet.png",
-    title: "%100 Casino Hoş Geldin Bonusu",
-    detail: "500 TL'ye kadar %100 casino bonusu!",
-    url: "https://www.youlink.ink/j3tovccng7",
-    tags: ["hosgeldin"]
-  },
-  {
-    site: "hiltonbet",
-    logoUrl: "logos/hiltonbet.png",
-    title: "%25 Spor Hoş Geldin Bonusu",
-    detail: "Düşük çevrimli spor hoş geldin bonusu!",
-    url: "https://www.youlink.ink/j3tovccng7",
-    tags: ["dusuk-cevrim", "hosgeldin"]
-  },
-  {
-    site: "hiltonbet",
-    logoUrl: "logos/hiltonbet.png",
-    title: "%25'e varan Kayıp Bonusu",
-    detail: "Muhteşem kayıp bonusu ile heyecan henüz bitmedi!",
-    url: "https://www.youlink.ink/j3tovccng7",
-    tags: ["kayip-bonusu"]
-  }
-];
+const bonuses = window.bonuses || [];
 
 let currentFilter = "tum";
 
@@ -417,49 +252,36 @@ function renderBonuses() {
   section.className = "section";
 
   filtered.forEach(b => {
-    const tagsHtml = b.tags
-      .map(t => `<span class="tag-pill">${TAG_LABELS[t]}</span>`)
-      .join("");
+    const tagsHtml = b.tags.map(t =>
+      `<span class="tag-pill">${TAG_LABELS[t]}</span>`
+    ).join("");
 
-    const item = document.createElement("div");
-    item.className = "bonus-item";
-
-    item.innerHTML = `
-      <div class="bonus-left">
-        <img class="site-logo"
-             src="${b.logoUrl}"
-             alt="${b.site}"
-             onclick="window.open('${b.url}', '_blank')"
-             onerror="this.style.visibility='hidden';">
-      </div>
-
-      <div class="bonus-center">
-        <div class="bonus-title">${b.title}</div>
-        <div class="bonus-detail">${b.detail}</div>
-        <div class="bonus-tags">${tagsHtml}</div>
-      </div>
-
-      <div class="bonus-right">
-        <button class="btn" onclick="window.open('${b.url}', '_blank')">
-          Sitede Kullan
-        </button>
-      </div>
-    `;
-
-    section.appendChild(item);
+    section.innerHTML += `
+      <div class="bonus-item">
+        <div class="bonus-left">
+          <img class="site-logo" src="${b.logoUrl}" onclick="window.open('${b.url}','_blank')">
+        </div>
+        <div class="bonus-center">
+          <div class="bonus-title">${b.title}</div>
+          <div class="bonus-detail">${b.detail}</div>
+          <div class="bonus-tags">${tagsHtml}</div>
+        </div>
+        <div class="bonus-right">
+          <button class="btn" onclick="window.open('${b.url}','_blank')">Sitede Kullan</button>
+        </div>
+      </div>`;
   });
 
   wrapper.appendChild(section);
 }
 
-/* Filtre tıklamaları */
 document.querySelectorAll(".filter-pill").forEach(pill => {
-  pill.addEventListener("click", () => {
+  pill.onclick = () => {
     document.querySelectorAll(".filter-pill").forEach(p => p.classList.remove("active"));
     pill.classList.add("active");
     currentFilter = pill.dataset.filter;
     renderBonuses();
-  });
+  };
 });
 
 renderBonuses();
